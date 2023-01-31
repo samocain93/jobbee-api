@@ -9,6 +9,11 @@ const dotenv = require('dotenv');
 // Setting up config.env file variables
 dotenv.config({path : './config/config.env'})
 
+// Importing routes
+const jobs = require('./routes/Jobs')
+
+app.use('/api/v1', jobs)
+
 
 
 const PORT = process.env.PORT || 3000;
